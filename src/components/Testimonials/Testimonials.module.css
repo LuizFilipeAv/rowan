@@ -1,4 +1,4 @@
-.testi { background: var(--coral); color: var(--ink); padding-block: var(--section); overflow-x: clip; }
+.testi { background: var(--acento); color: var(--texto); padding-block: var(--section); overflow-x: clip; }
 
 .grid { display: grid; gap: clamp(2.5rem, 6vw, 4rem); }
 @media (min-width: 960px) {
@@ -6,7 +6,7 @@
 }
 
 /* blue-deep on coral = 4.7:1; white is decorative only (mark, avatar ring) */
-.title { font-size: var(--step-4); color: var(--blue-deep); max-width: 10ch; }
+.title { font-size: var(--step-4); color: var(--primaria-hover); max-width: 10ch; }
 
 .stage { position: relative; padding-top: clamp(2.75rem, 5vw, 4rem); }
 .mark {
@@ -25,7 +25,7 @@
   transition-delay: 0s, 0s, 0s;
 }
 
-.stars { width: 120px; height: 24px; color: var(--blue-deep); }
+.stars { width: 120px; height: 24px; color: var(--primaria-hover); }
 .quote {
   margin-top: 1.25rem; max-width: 26em;
   font-size: var(--step-2); font-weight: 700; line-height: 1.22; letter-spacing: -0.01em;

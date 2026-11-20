@@ -5,7 +5,7 @@
   margin-inline: auto;
   display: grid; gap: clamp(2rem, 4vw, 3rem);
   padding: clamp(1.5rem, 4vw, 4rem);
-  background: var(--blue); color: var(--white);
+  background: var(--primaria); color: var(--white);
   border-radius: var(--radius-l);
   overflow: clip;
 }
@@ -20,11 +20,11 @@
 .actions { position: relative; display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; margin-top: clamp(1.75rem, 3vw, 2.5rem); }
 .actions :global(.btn) { min-height: 52px; justify-content: center; }
 /* white on coral is 2.9:1, so the CTA uses ink text (6.3:1) */
-.wa { --btn-fg: var(--ink); }
+.wa { --btn-fg: var(--texto); }
 
 .arrow {
   display: none; position: absolute; left: 1.5rem; top: calc(100% + 0.5rem);
-  width: 92px; height: auto; color: var(--coral); pointer-events: none;
+  width: 92px; height: auto; color: var(--acento); pointer-events: none;
 }
 @media (min-width: 640px) {
   .actions { margin-bottom: 3.5rem; }
@@ -54,5 +54,5 @@
 }
 .info dt { font-weight: 800; color: var(--white); }
 .info dd { margin: 0.35rem 0 0; color: rgb(255 255 255 / 0.8); }
-.info a { color: inherit; text-decoration-color: var(--coral); }
+.info a { color: inherit; text-decoration-color: var(--acento); }
 .info a:hover { color: var(--white); }

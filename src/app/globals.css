@@ -1,56 +1,74 @@
 
-/* ============ Tokens ============ */
+/* ============ Tokens — paleta "Clínico Moderno" (rowan docs/06 §2) ============ */
 :root {
-  /* Brand */
-  --blue: #0e359d;
-  --blue-deep: #0a2672;
-  --blue-soft: #dfe6f7;
-  --coral: #ff606a;
-  --coral-deep: #e8444f;
-  --coral-soft: #ffe3e5;
+  /* Marca e ação */
+  --primaria: #0f766e;
+  --primaria-hover: #0b5e57;
+  --primaria-suave: #e3f2ef;
+  --primaria-texto: #0b5e57;
+  --acento: #7cc7bc;          /* acento-2: ilustração, traço à mão, segunda série */
+  --acento-forte: #4fa99c;
+  --acento-suave: #e3f2ef;
   --white: #ffffff;
-  /* exact studio backdrops baked into the photos (cards holding a photo use these to stay seamless) */
-  --photo-blue: #01258f;
-  --photo-coral: #fb5860;
-  --photo-grey: #cfcfcf;
 
-  /* Neutrals (photo backdrop greys, slightly cool) */
-  --paper: #f4f5f8;
+  /* Superfície e texto */
+  --fundo: #f3f6f5;
+  --superficie-2: #f8faf9;
+  --borda: #e1e7e6;
+  --texto: #1e293b;
+  --texto-suave: #5b6b7f;
+  --neutro-suave: #edf1f0;
+
+  /* Escuro (sidebar do produto): seções de destaque */
+  --nav-fundo: #0b3b37;
+  --nav-texto: #d3e6e2;
+  --nav-suave: #8fb8b1;
+  --nav-ativo: #165a53;
+  --nav-borda: #1a4f49;
+
+  /* Semântica de estado: só para status, nunca decoração */
+  --sucesso: #16a34a; --sucesso-suave: #dcfce7; --sucesso-texto: #166534;
+  --alerta: #d97706;  --alerta-suave: #fef3c7;  --alerta-texto: #92400e;
+  --critico: #dc2626; --critico-suave: #fee4e2; --critico-texto: #b42318;
+  --info: #2563eb;    --info-suave: #dbeafe;    --info-texto: #1e40af;
+
+  /* Fundos exatos gravados nas fotos (cards com foto usam estes para emendar) */
+  --foto-primaria: #0f766e;
+  --foto-acento: #7cc7bc;
+  --foto-cinza: #cfcfcf;
   --stone: #9c9da0;
-  --stone-dark: #8a8b8e;
-  --ink: #0b1433;
-  --ink-soft: #3c4566;
 
-  /* Type */
-  --font-display: var(--nf-display), 'Arial Narrow', sans-serif;
-  --font-logo: var(--nf-logo), sans-serif;
-  --font-body: var(--nf-body), system-ui, sans-serif;
+  /* Tipo: Plus Jakarta Sans em tudo */
+  --font-display: var(--nf-sans), system-ui, sans-serif;
+  --font-logo: var(--nf-sans), system-ui, sans-serif;
+  --font-body: var(--nf-sans), system-ui, sans-serif;
 
   --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
-  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.13rem);
-  --step-1: clamp(1.2rem, 1.1rem + 0.45vw, 1.5rem);
-  --step-2: clamp(1.6rem, 1.35rem + 1.1vw, 2.4rem);
-  --step-3: clamp(2.4rem, 1.8rem + 2.6vw, 4.2rem);
-  --step-4: clamp(3.2rem, 2.2rem + 4.5vw, 6rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.45vw, 1.45rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.1vw, 2.3rem);
+  --step-3: clamp(2.2rem, 1.7rem + 2.4vw, 3.8rem);
+  --step-4: clamp(2.8rem, 2rem + 4vw, 5.4rem);
 
-  /* Space */
+  /* Espaço e forma */
   --gutter: clamp(1rem, 0.6rem + 1.8vw, 2rem);
   --section: clamp(5rem, 3.5rem + 7vw, 10rem);
-  --radius-s: 12px;
-  --radius-m: 24px;
-  --radius-l: clamp(24px, 1rem + 2vw, 44px);
+  --radius-s: 10px;
+  --radius-m: 14px;
+  --radius-l: clamp(18px, 0.8rem + 1.6vw, 32px);
   --max: 1360px;
 
-  /* Motion (personality: playful, but quick) */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);      /* expo-out: entrances */
+  /* Motion: calma clínica — rápido, sem quique exagerado */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1); /* small overshoot: micro-interactions */
-  --dur-fast: 180ms;
-  --dur: 320ms;
-  --dur-slow: 700ms;
+  --ease-back: cubic-bezier(0.34, 1.3, 0.64, 1);
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 650ms;
 
-  --shadow-soft: 0 18px 40px -18px rgb(11 20 51 / 0.35);
-  --shadow-lift: 0 30px 60px -24px rgb(11 20 51 / 0.45);
+  --shadow-soft: 0 1px 2px rgb(11 59 55 / 0.06), 0 4px 14px rgb(11 59 55 / 0.05);
+  --shadow-lift: 0 10px 28px rgb(15 23 42 / 0.1);
+  --shadow-float: 0 24px 50px -18px rgb(11 59 55 / 0.35);
 
   color-scheme: light;
 }
@@ -66,7 +84,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--step-0);
   line-height: 1.6;
-  color: var(--ink);
+  color: var(--texto);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
@@ -76,16 +94,17 @@ img { height: auto; }
 button, input, textarea, select { font: inherit; color: inherit; }
 button { cursor: pointer; background: none; border: 0; }
 a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
-h1, h2, h3, h4 { line-height: 1.05; text-wrap: balance; font-weight: 900; }
+h1, h2, h3, h4 { line-height: 1.08; text-wrap: balance; font-weight: 800; letter-spacing: -0.025em; }
+.tabular { font-variant-numeric: tabular-nums; }
 p { text-wrap: pretty; }
 
 /* ============ Browser surfaces ============ */
-::selection { background: var(--coral); color: var(--white); }
-:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 6px; }
-html { scrollbar-color: var(--blue) var(--paper); caret-color: var(--coral); }
+::selection { background: var(--primaria); color: var(--white); }
+:focus-visible { outline: 2px solid var(--info); outline-offset: 2px; border-radius: 6px; }
+html { scrollbar-color: var(--primaria) var(--fundo); caret-color: var(--primaria); }
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--paper); }
-::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 10px; border: 2px solid var(--paper); }
+::-webkit-scrollbar-track { background: var(--fundo); }
+::-webkit-scrollbar-thumb { background: var(--primaria); border-radius: 10px; border: 2px solid var(--fundo); }
 
 /* ============ Primitives ============ */
 .container { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
@@ -95,14 +114,13 @@ html { scrollbar-color: var(--blue) var(--paper); caret-color: var(--coral); }
 }
 .display {
   font-family: var(--font-display);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
 }
 
 .btn {
-  --btn-bg: var(--coral);
+  --btn-bg: var(--primaria);
   --btn-fg: var(--white);
   display: inline-flex; align-items: center; gap: 0.6em;
   padding: 0.85em 1.4em;
@@ -112,12 +130,12 @@ html { scrollbar-color: var(--blue) var(--paper); caret-color: var(--coral); }
   transition: transform var(--dur) var(--ease-back), background-color var(--dur-fast) linear, box-shadow var(--dur) var(--ease-out);
   will-change: transform;
 }
-.btn:hover { background: var(--coral-deep); box-shadow: 0 14px 30px -12px rgb(255 96 106 / 0.7); }
+.btn:hover { background: var(--primaria-hover); box-shadow: 0 14px 30px -12px rgb(15 118 110 / 0.55); }
 .btn:active { transform: scale(0.96); }
-.btn--blue { --btn-bg: var(--blue); }
-.btn--blue:hover { background: var(--blue-deep); box-shadow: 0 14px 30px -12px rgb(14 53 157 / 0.6); }
+.btn--claro { --btn-bg: var(--white); --btn-fg: var(--primaria-texto); }
+.btn--claro:hover { background: var(--primaria-suave); box-shadow: 0 14px 30px -12px rgb(0 0 0 / 0.35); }
 .btn--ghost { --btn-bg: transparent; --btn-fg: currentColor; box-shadow: inset 0 0 0 2px currentColor; }
-.btn--ghost:hover { background: var(--white); color: var(--blue); box-shadow: inset 0 0 0 2px var(--white); }
+.btn--ghost:hover { background: color-mix(in srgb, currentColor 12%, transparent); }
 .btn__arrow {
   display: grid; place-items: center;
   width: 1.7em; height: 1.7em; margin: -0.5em -0.8em -0.5em 0;
@@ -165,13 +183,13 @@ html { scrollbar-color: var(--blue) var(--paper); caret-color: var(--coral); }
 .cursor {
   position: fixed; left: 0; top: 0; z-index: 100;
   width: 14px; height: 14px; margin: -7px 0 0 -7px;
-  border-radius: 50%; background: var(--coral);
+  border-radius: 50%; background: var(--primaria);
   pointer-events: none; opacity: 0;
   display: grid; place-items: center;
   transition: opacity var(--dur) linear, width var(--dur) var(--ease-out), height var(--dur) var(--ease-out), margin var(--dur) var(--ease-out), background-color var(--dur-fast) linear;
 }
 .cursor.is-on { opacity: 1; }
-.cursor.is-link { width: 44px; height: 44px; margin: -22px 0 0 -22px; background: rgb(255 96 106 / 0.25); }
+.cursor.is-link { width: 44px; height: 44px; margin: -22px 0 0 -22px; background: rgb(15 118 110 / 0.2); }
 .cursor.is-label { width: 92px; height: 92px; margin: -46px 0 0 -46px; }
 .cursor__label { font-size: 0.8rem; font-weight: 700; color: var(--white); opacity: 0; transition: opacity var(--dur-fast) linear; }
 .cursor.is-label .cursor__label { opacity: 1; }
@@ -180,7 +198,7 @@ html { scrollbar-color: var(--blue) var(--paper); caret-color: var(--coral); }
 .skip {
   position: fixed; top: 0.75rem; left: 0.75rem; z-index: 200;
   padding: 0.6em 1em; border-radius: 999px;
-  background: var(--blue); color: var(--white); font-weight: 700; text-decoration: none;
+  background: var(--primaria); color: var(--white); font-weight: 700; text-decoration: none;
   transform: translateY(-160%);
   transition: transform var(--dur) var(--ease-out);
 }

@@ -10,7 +10,7 @@
   width: 110vw;
   margin-left: -5vw;
   transform: rotate(-2deg);
-  background: var(--blue);
+  background: var(--primaria);
   color: var(--white);
   padding-block: 0.22em;
   overflow: clip;
@@ -45,11 +45,11 @@
   flex: none;
   width: 0.6em;
   height: 0.6em;
-  fill: var(--coral);
+  fill: var(--acento);
 }
 
-.coral .band { background: var(--coral); color: var(--blue); }
-.coral .paw { fill: var(--blue); }
+.coral .band { background: var(--acento); color: var(--primaria); }
+.coral .paw { fill: var(--primaria); }
 
 @keyframes marquee-scroll {
   from { transform: translate3d(0, 0, 0); }

@@ -1,22 +1,22 @@
-.shop { background: var(--paper); padding-block: var(--section); overflow-x: clip; }
+.shop { background: var(--fundo); padding-block: var(--section); overflow-x: clip; }
 
 .head {
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
   gap: 1.5rem 2rem; margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
-.title { font-size: var(--step-3); color: var(--blue); max-width: 15ch; }
+.title { font-size: var(--step-3); color: var(--primaria); max-width: 15ch; }
 
 .nav { display: flex; gap: 0.75rem; }
 .arrow {
   display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
-  background: var(--blue); color: var(--white);
+  background: var(--primaria); color: var(--white);
   transition: transform var(--dur) var(--ease-back), background-color var(--dur-fast) linear, opacity var(--dur-fast) linear;
 }
 .arrow svg { width: 18px; height: 18px; }
 .arrowPrev svg { transform: rotate(180deg); }
-.arrow:hover { background: var(--blue-deep); transform: scale(1.08); }
+.arrow:hover { background: var(--primaria-hover); transform: scale(1.08); }
 .arrow:active { transform: scale(0.92); }
-.arrow[aria-disabled='true'] { opacity: 0.35; cursor: default; transform: none; background: var(--blue); }
+.arrow[aria-disabled='true'] { opacity: 0.35; cursor: default; transform: none; background: var(--primaria); }
 
 /* Native horizontal scroll + snap; scrollbar hidden visually, the region stays focusable. */
 .track {
@@ -67,17 +67,17 @@
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   margin-top: 1rem; padding-inline: 0.25rem;
 }
-.name { font-family: var(--font-body); font-size: var(--step-1); font-weight: 800; line-height: 1.15; color: var(--ink); }
-.price { margin-top: 0.2rem; font-weight: 600; color: var(--ink-soft); }
+.name { font-family: var(--font-body); font-size: var(--step-1); font-weight: 800; line-height: 1.15; color: var(--texto); }
+.price { margin-top: 0.2rem; font-weight: 600; color: var(--texto-suave); }
 
 .add {
   flex: none; position: relative; display: grid; place-items: center;
   width: 48px; height: 48px; border-radius: 50%;
-  background: var(--coral); color: var(--ink);
+  background: var(--acento); color: var(--texto);
   transition: transform var(--dur) var(--ease-back), background-color var(--dur-fast) linear;
 }
 .add svg { width: 24px; height: 24px; overflow: visible; }
-.add:hover { background: var(--coral-deep); transform: scale(1.08); }
+.add:hover { background: var(--acento-forte); transform: scale(1.08); }
 .add:active { transform: scale(0.9); }
 .add.is-added { transform: scale(1.18); }
 

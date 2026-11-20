@@ -9,7 +9,7 @@
   max-width: calc(var(--max) + 2 * var(--gutter));
   margin-inline: auto;
   padding: clamp(2.5rem, 2rem + 4vw, 5rem) clamp(1.25rem, 0.5rem + 4vw, 4.5rem) 0;
-  background: var(--photo-blue);
+  background: var(--foto-primaria);
   color: var(--white);
   border-radius: var(--radius-l);
   overflow: clip;
@@ -27,7 +27,7 @@
   font-size: var(--step-4);
   max-width: 12ch;
 }
-.hl { color: var(--coral-soft); }
+.hl { color: var(--acento-suave); }
 
 .lead {
   max-width: 52ch;

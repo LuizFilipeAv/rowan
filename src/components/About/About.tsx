@@ -52,7 +52,7 @@ export default function About() {
           <svg className={styles.scribble} viewBox="0 0 170 110" fill="none" aria-hidden="true" data-draw>
             <path
               d="M6 12C52-6 92 22 70 46C54 64 26 44 52 30C84 14 124 52 152 94"
-              stroke="var(--coral)"
+              stroke="var(--acento)"
               strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -60,7 +60,7 @@ export default function About() {
             />
             <path
               d="M131 87.6L152 94L147 72.6"
-              stroke="var(--coral)"
+              stroke="var(--acento)"
               strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"

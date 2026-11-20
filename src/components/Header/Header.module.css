@@ -19,12 +19,12 @@
 }
 .hdr__nav ul { display: flex; gap: clamp(0.8rem, 2vw, 1.8rem); list-style: none; padding: 0; }
 .hdr__nav a {
-  position: relative; font-weight: 600; font-size: var(--step--1); text-decoration: none; color: var(--ink);
+  position: relative; font-weight: 600; font-size: var(--step--1); text-decoration: none; color: var(--texto);
   padding-block: 0.6rem;
 }
 .hdr__nav a::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0.25rem; height: 2px;
-  background: var(--coral); border-radius: 2px;
+  background: var(--acento); border-radius: 2px;
   transform: scaleX(0); transform-origin: right;
   transition: transform var(--dur) var(--ease-out);
 }
@@ -40,7 +40,7 @@
 
 .hdr__burger {
   display: none; width: 48px; height: 48px; border-radius: 50%;
-  background: var(--blue); color: var(--white); place-items: center;
+  background: var(--primaria); color: var(--white); place-items: center;
   transition: transform var(--dur) var(--ease-back);
 }
 .hdr__burger:active { transform: scale(0.92); }
@@ -51,7 +51,7 @@
 
 .menu {
   position: fixed; inset: 0; z-index: -1; pointer-events: auto;
-  background: var(--blue); color: var(--white);
+  background: var(--primaria); color: var(--white);
   display: flex; flex-direction: column; justify-content: center;
   padding: 6rem var(--gutter) 2rem;
   clip-path: circle(0% at calc(100% - 3rem) 3rem);
@@ -64,7 +64,7 @@
 .menu li { overflow: clip; }
 .menu li a { transform: translateY(100%); transition: transform 600ms var(--ease-out); transition-delay: calc(var(--i) * 50ms + 150ms); }
 .menu.is-open li a { transform: none; }
-.menu a:hover { color: var(--coral); }
+.menu a:hover { color: var(--acento); }
 .menu__foot { margin-top: 2rem; color: rgb(255 255 255 / 0.75); }
 
 @media (max-width: 860px) {

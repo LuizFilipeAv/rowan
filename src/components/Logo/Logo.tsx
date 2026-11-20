@@ -17,7 +17,7 @@ export default function Logo({ className = '', id, as: Tag = 'span' }: Props) {
             <ellipse cx="73" cy="64" rx="5" ry="6.5" />
           </g>
           <path d="M55 76 Q60 81 65 76" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-          <g stroke="var(--coral)" strokeWidth="4.5" strokeLinecap="round">
+          <g stroke="var(--acento)" strokeWidth="4.5" strokeLinecap="round">
             <g className={styles.wl}><path d="M30 74 H8" /><path d="M31 83 L10 90" /></g>
             <g className={styles.wr}><path d="M90 74 H112" /><path d="M89 83 L110 90" /></g>
           </g>

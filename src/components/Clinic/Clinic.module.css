@@ -13,7 +13,7 @@
 }
 .lead {
   max-width: 52ch;
-  color: var(--ink-soft);
+  color: var(--texto-suave);
 }
 
 .stage {
@@ -29,7 +29,7 @@
   overflow: hidden;
   border-radius: var(--radius-l);
   clip-path: inset(0 0 0 0 round var(--radius-l));
-  background: var(--paper);
+  background: var(--fundo);
   will-change: clip-path;
 }
 .inner {
@@ -64,7 +64,7 @@
   padding: 0.6em 1.1em;
   border-radius: 999px;
   background: var(--white);
-  color: var(--blue);
+  color: var(--primaria);
   font-size: var(--step--1);
   font-weight: 700;
   line-height: 1.2;

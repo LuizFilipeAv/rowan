@@ -43,7 +43,7 @@ export default function Hero() {
         gsap.set(ui, { y: 30, opacity: 0 });
 
         if (firstVisit && intro.current) {
-          try { sessionStorage.setItem('bigode-intro', '1'); } catch {}
+          try { sessionStorage.setItem('rowan-intro', '1'); } catch {}
           const ov = intro.current;
           const logo = ov.querySelector('.logo')!;
           tl.add(() => getLenis()?.stop())
@@ -128,13 +128,13 @@ export default function Hero() {
             </div>
 
             <svg className={`${s.hero__marks} ${s['hero__marks--r']}`} viewBox="0 0 120 120" fill="none" data-draw="" aria-hidden="true">
-              <path d="M18 62 L44 50" stroke="var(--coral)" strokeWidth="7" strokeLinecap="round" />
-              <path d="M24 34 L48 30" stroke="var(--coral)" strokeWidth="7" strokeLinecap="round" style={{ ['--i' as string]: 1 }} />
-              <path d="M40 10 L54 18" stroke="var(--coral)" strokeWidth="7" strokeLinecap="round" style={{ ['--i' as string]: 2 }} />
+              <path d="M18 62 L44 50" stroke="var(--acento)" strokeWidth="7" strokeLinecap="round" />
+              <path d="M24 34 L48 30" stroke="var(--acento)" strokeWidth="7" strokeLinecap="round" style={{ ['--i' as string]: 1 }} />
+              <path d="M40 10 L54 18" stroke="var(--acento)" strokeWidth="7" strokeLinecap="round" style={{ ['--i' as string]: 2 }} />
             </svg>
             <svg className={`${s.hero__marks} ${s['hero__marks--l']}`} viewBox="0 0 160 120" fill="none" data-draw="" aria-hidden="true">
               <path d="M150 96 C 120 100, 92 88, 88 66 C 84 44, 112 40, 114 58 C 116 80, 74 92, 40 70 C 24 60, 16 44, 12 26"
-                stroke="var(--blue)" strokeWidth="5" strokeLinecap="round" style={{ ['--i' as string]: 3 }} />
+                stroke="var(--primaria)" strokeWidth="5" strokeLinecap="round" style={{ ['--i' as string]: 3 }} />
             </svg>
           </div>
 
