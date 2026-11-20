@@ -1,29 +1,36 @@
 import styles from './Logo.module.css';
 
-type Props = { className?: string; id?: string; as?: 'span' | 'div' };
+type Props = { className?: string; id?: string; as?: 'span' | 'div'; mono?: boolean };
 
-/** Wordmark "bigode": the "o" is a cat face — ears, eyes and coral whiskers. Sizes with font-size. */
-export default function Logo({ className = '', id, as: Tag = 'span' }: Props) {
+/**
+ * Marca rowan (docs/06 §2 do monorepo): símbolo em quadrado arredondado com pata e cruz + wordmark em caixa baixa.
+ * O quadrado usa `--logo-bg` (padrão: primária); `mono` deixa símbolo e texto em `currentColor`, para fundo escuro.
+ * Escala com font-size. `.logo__toe` é o gancho da animação de entrada no Hero.
+ */
+export default function Logo({ className = '', id, as: Tag = 'span', mono = false }: Props) {
   return (
-    <Tag className={`${styles.logo} logo ${className}`} id={id} role="img" aria-label="Bigode — clínica veterinária e petshop">
-      <span aria-hidden="true">big</span>
-      <span className={styles.o} aria-hidden="true">
-        <svg viewBox="0 0 120 120" fill="none">
-          <path className={`${styles.ear} ${styles.earL} logo__ear`} d="M22 52 L26 8 Q28 2 33 6 L60 30" fill="currentColor" />
-          <path className={`${styles.ear} ${styles.earR} logo__ear`} d="M98 52 L94 8 Q92 2 87 6 L60 30" fill="currentColor" />
-          <circle cx="60" cy="68" r="38" stroke="currentColor" strokeWidth="17" fill="var(--logo-fill, transparent)" />
-          <g className={styles.eyes} fill="currentColor">
-            <ellipse cx="47" cy="64" rx="5" ry="6.5" />
-            <ellipse cx="73" cy="64" rx="5" ry="6.5" />
-          </g>
-          <path d="M55 76 Q60 81 65 76" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-          <g stroke="var(--acento)" strokeWidth="4.5" strokeLinecap="round">
-            <g className={styles.wl}><path d="M30 74 H8" /><path d="M31 83 L10 90" /></g>
-            <g className={styles.wr}><path d="M90 74 H112" /><path d="M89 83 L110 90" /></g>
-          </g>
-        </svg>
-      </span>
-      <span aria-hidden="true">de</span>
+    <Tag
+      className={`${styles.logo} ${mono ? styles.mono : ''} logo ${className}`}
+      id={id}
+      role="img"
+      aria-label="rowan"
+    >
+      <svg className={styles.mark} viewBox="0 0 48 48" aria-hidden="true">
+        <rect className={styles.tile} width="48" height="48" rx="12" />
+        <g className={styles.ink}>
+          <circle className={`${styles.toe} logo__toe`} cx="12.6" cy="21.2" r="3.3" />
+          <circle className={`${styles.toe} logo__toe`} cx="19.6" cy="13.4" r="3.7" />
+          <circle className={`${styles.toe} logo__toe`} cx="28.4" cy="13.4" r="3.7" />
+          <path className={`${styles.leaf} logo__toe`} d="M32.1 22.8C31.5 17.1 34.8 13.4 40.7 13c.6 5.7-2.7 9.3-8.6 9.8z" />
+          <path d="M24 22.6c7 0 13 6 13 11.5 0 4.5-3 6.5-6.5 6.5-2.5 0-4.3-1.5-6.5-1.5s-4 1.5-6.5 1.5C14 40.6 11 38.6 11 34.1 11 28.6 17 22.6 24 22.6z" />
+        </g>
+        <path className={styles.vein} d="M33.4 21.6l5.9-7.1" />
+        <g className={styles.cross}>
+          <rect x="22.6" y="27.4" width="2.8" height="9" rx="1" />
+          <rect x="19.5" y="30.5" width="9" height="2.8" rx="1" />
+        </g>
+      </svg>
+      <span className={styles.word} aria-hidden="true">rowan</span>
     </Tag>
   );
 }
