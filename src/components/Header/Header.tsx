@@ -10,7 +10,7 @@ const links = [
   { href: '#planos', label: 'Planos' },
   { href: '#para-quem', label: 'Para quem é' },
 ];
-const menuLinks = [...links, { href: '#contato', label: 'Testar grátis' }];
+const menuLinks = [...links, { href: '#contato', label: 'Falar com a equipe' }];
 
 const Arrow = () => (
   <span className="btn__arrow" aria-hidden="true">
@@ -72,7 +72,7 @@ export default function Header() {
         <a href="#top" className={s.hdr__logo} aria-label="rowan, voltar ao início"><Logo /></a>
 
         <div className={s.hdr__end}>
-          <a className={`btn ${s.hdr__cta}`} href="#contato" data-magnetic="">Testar 14 dias grátis <Arrow /></a>
+          <a className={`btn ${s.hdr__cta}`} href="#planos" data-magnetic="">Ver planos <Arrow /></a>
           <button
             ref={burger}
             className={s.hdr__burger}
@@ -97,7 +97,7 @@ export default function Header() {
             <li key={l.href} style={{ ['--i' as string]: i }}><a href={l.href} className="display">{l.label}</a></li>
           ))}
         </ul>
-        <p className={s.menu__foot}>14 dias grátis · anual paga 10, usa 12</p>
+        <p className={s.menu__foot}>No anual você paga 10 meses e usa 12</p>
       </div>
     </header>
   );

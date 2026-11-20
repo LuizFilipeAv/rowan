@@ -12,7 +12,7 @@ const sans = Plus_Jakarta_Sans({
 
 const title = 'rowan — sistema de gestão para petshop e clínica veterinária';
 const description =
-  'Agenda, banho e tosa com acompanhamento ao vivo, confirmação automática pelo WhatsApp, caixa, notas e financeiro. Um cadastro e um histórico para petshop, clínica e hospital. Teste 14 dias grátis.';
+  'Agenda, banho e tosa com acompanhamento ao vivo, confirmação automática pelo WhatsApp, caixa, notas e financeiro. Um cadastro e um histórico para petshop, clínica e hospital.';
 
 export const metadata: Metadata = {
   title,

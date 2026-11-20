@@ -248,8 +248,8 @@ export default function Hero() {
               Agenda, banho e tosa, caixa e financeiro num cadastro só. O tutor acompanha o banho ao vivo pelo link e confirma o horário no WhatsApp.
             </p>
             <div className={s.hero__actions}>
-              <a className="btn" href="#contato" data-magnetic="">Testar 14 dias grátis <Arrow /></a>
-              <a className={`btn btn--ghost ${s.hero__ghost}`} href="#planos">Ver os planos</a>
+              <a className="btn" href="#planos" data-magnetic="">Ver planos <Arrow /></a>
+              <a className={`btn btn--ghost ${s.hero__ghost}`} href="#contato">Falar com a equipe</a>
             </div>
           </div>
 
