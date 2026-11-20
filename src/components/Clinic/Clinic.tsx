@@ -22,7 +22,7 @@ export default function Clinic() {
           <div className={styles.inner} data-inner>
             <Image
               src={space}
-              alt="Recepção clara de um petshop com clínica, com poltronas verde-azuladas e um golden retriever deitado no chão"
+              alt="Recepcionista de camisa verde-azulada usa um tablet no balcão do petshop enquanto um tutor espera com um golden retriever animado; ao fundo, uma tosadora seca um cachorrinho branco"
               fill
               sizes="(min-width: 900px) calc(100vw - 4rem), 100vw"
               className={styles.img}
