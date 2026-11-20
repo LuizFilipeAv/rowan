@@ -27,18 +27,18 @@
   will-change: transform;
 }
 
-/* Wordmark gigante atrás do pet */
+/* Wordmark gigante: fica NA FRENTE da foto, senão o fundo cinza dela apaga as letras perto do pet */
 .hero__mark {
-  position: absolute; left: 0; right: 0; top: clamp(4.5rem, 11svh, 7.5rem);
+  position: absolute; left: 0; right: 0; top: clamp(4.25rem, 9.5svh, 6.75rem);
   display: flex; justify-content: center;
-  z-index: 0;
+  z-index: 2;
   pointer-events: none;
 }
 .hero__word {
   display: block;
   font-family: var(--font-logo);
   font-weight: 800;
-  font-size: min(25vw, 33svh);
+  font-size: min(23vw, 29svh);
   line-height: 0.9;
   letter-spacing: -0.06em;
   color: var(--primaria);
