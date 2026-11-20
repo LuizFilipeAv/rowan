@@ -2,10 +2,19 @@ import styles from './Marquee.module.css';
 
 type Props = {
   reverse?: boolean;
-  tone?: 'blue' | 'coral';
+  tone?: 'primaria' | 'acento' | 'coral';
 };
 
-const items = ['Consultas', 'Vacinas', 'Banho & tosa', 'Hotel', 'Petshop', 'Emergência 24h'];
+const items = [
+  'Agenda',
+  'Confirmação no WhatsApp',
+  'Banho & Tosa ao vivo',
+  'Leva e traz',
+  'Caixa e PDV',
+  'Notas fiscais',
+  'Financeiro',
+  'Vacinas',
+];
 
 function Paw() {
   return (
@@ -21,11 +30,14 @@ function Paw() {
 
 /**
  * Decorative ticker band. The moving track is aria-hidden; a visually-hidden
- * list carries the same services for screen readers.
- * tone: 'blue' (default) or 'coral'. reverse: scrolls in the opposite direction.
+ * list carries the same modules for screen readers.
+ * tone: 'primaria' (default, teal band) or 'acento' (light teal band, dark text).
+ * 'coral' is a legacy alias of 'acento', kept until src/app/page.tsx is updated.
+ * reverse: scrolls in the opposite direction.
  */
-export default function Marquee({ reverse = false, tone = 'blue' }: Props) {
-  const rootClass = tone === 'coral' ? `${styles.marquee} ${styles.coral}` : styles.marquee;
+export default function Marquee({ reverse = false, tone = 'primaria' }: Props) {
+  const isAcento = tone === 'acento' || tone === 'coral';
+  const rootClass = isAcento ? `${styles.marquee} ${styles.acento}` : styles.marquee;
   const trackClass = reverse ? `${styles.track} ${styles.reverse}` : styles.track;
 
   return (

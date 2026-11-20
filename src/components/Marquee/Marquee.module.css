@@ -48,8 +48,9 @@
   fill: var(--acento);
 }
 
-.coral .band { background: var(--acento); color: var(--primaria); }
-.coral .paw { fill: var(--primaria); }
+/* Faixa 'acento': fundo claro, texto escuro (contraste AA sobre --acento). */
+.acento .band { background: var(--acento); color: var(--nav-fundo); }
+.acento .paw { fill: var(--nav-fundo); }
 
 @keyframes marquee-scroll {
   from { transform: translate3d(0, 0, 0); }

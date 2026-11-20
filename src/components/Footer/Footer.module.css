@@ -1,13 +1,13 @@
 .footer {
-  background: var(--texto);
-  color: var(--white);
+  background: var(--nav-fundo);
+  color: var(--nav-texto);
   padding-block: clamp(3.5rem, 2.5rem + 4vw, 6rem) 2rem;
 }
 
-/* Logo: the shared Logo sets its own blue on `.logo` (same specificity), so this
+/* Logo: the shared Logo sets its own colour on `.logo` (same specificity), so this
    compound selector is required to win regardless of stylesheet order. */
 .footer .logo {
-  color: var(--white);
+  color: var(--nav-texto);
   font-size: clamp(3rem, 10vw, 8rem);
 }
 
@@ -28,7 +28,7 @@
   text-wrap: balance;
 }
 
-.col { font-style: normal; color: rgb(255 255 255 / 0.7); }
+.col { font-style: normal; color: var(--nav-suave); }
 .title {
   margin-bottom: 0.9rem;
   font-family: var(--font-display);
@@ -37,7 +37,7 @@
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--nav-texto);
 }
 .list {
   display: grid;
@@ -51,11 +51,9 @@
   min-height: 44px;
 }
 
-.social { gap: 0.6rem; }
-.icon { width: 20px; height: 20px; flex: none; }
-
-/* Links: underline fades in on hover, colour shifts to coral */
+/* Links: underline fades in on hover, colour shifts to --acento */
 .footer a {
+  color: var(--nav-texto);
   text-decoration: underline;
   text-decoration-color: transparent;
   text-decoration-thickness: 2px;
@@ -77,16 +75,16 @@
   gap: 1rem 2rem;
   margin-top: clamp(3rem, 2rem + 3vw, 4.5rem);
   padding-top: 1.5rem;
-  border-top: 1px solid rgb(255 255 255 / 0.14);
+  border-top: 1px solid var(--nav-borda);
   font-size: var(--step--1);
-  color: rgb(255 255 255 / 0.7);
+  color: var(--nav-suave);
 }
 .topLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
   min-height: 44px;
-  color: var(--white);
+  color: var(--nav-texto);
 }
 .topLink svg {
   width: 20px;
