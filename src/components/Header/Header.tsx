@@ -7,10 +7,10 @@ import s from './Header.module.css';
 const links = [
   { href: '#modulos', label: 'Módulos' },
   { href: '#como-funciona', label: 'Como funciona' },
-  { href: '#planos', label: 'Planos' },
   { href: '#para-quem', label: 'Para quem é' },
 ];
-const menuLinks = [...links, { href: '#contato', label: 'Falar com a equipe' }];
+// "Planos" sai da barra no desktop (o CTA "Ver planos" já está à direita), mas fica no menu do celular, onde o CTA some.
+const menuLinks = [...links.slice(0, 2), { href: '#planos', label: 'Planos' }, ...links.slice(2), { href: '#contato', label: 'Falar com a equipe' }];
 
 const Arrow = () => (
   <span className="btn__arrow" aria-hidden="true">
