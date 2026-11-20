@@ -113,8 +113,8 @@ export default function ServicesAccordion({ services }: { services: Service[] })
                 ))}
               </ul>
               <div className={styles.action}>
-                <a className={styles.cta} href="#contato">
-                  <span>Testar grátis<span className="visually-hidden">: {s.title}</span></span>
+                <a className={styles.cta} href="#planos">
+                  <span>Ver planos<span className="visually-hidden">: {s.title}</span></span>
                   <svg viewBox="0 0 10 10" aria-hidden="true">
                     <path d="M0 5.6h7.6L4.1 9.1 5 10l5-5-5-5-.9.9 3.5 3.5H0z" fill="currentColor" />
                   </svg>

@@ -11,7 +11,7 @@ export default function Shop() {
             Um preço por loja, sem surpresa na fatura
           </SplitText>
           <p className={styles.lead} data-reveal="up">
-            Escolha pelo tamanho da operação. Todo plano começa com 14 dias grátis, com todos os módulos dele.
+            Escolha pelo tamanho da operação. No anual você paga 10 meses e usa 12.
           </p>
         </header>
         <Plans />

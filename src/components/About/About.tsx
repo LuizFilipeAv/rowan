@@ -23,8 +23,8 @@ export default function About() {
               <dd><span className={styles.num} data-count="3">3</span></dd>
             </div>
             <div className={styles.fact}>
-              <dt>dias grátis para testar</dt>
-              <dd><span className={styles.num} data-count="14">14</span></dd>
+              <dt>módulos num sistema só</dt>
+              <dd><span className={styles.num} data-count="8">8</span></dd>
             </div>
             <div className={styles.fact}>
               <dt>cadastro por tutor e por pet</dt>

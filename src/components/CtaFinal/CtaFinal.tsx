@@ -10,15 +10,15 @@ export default function CtaFinal() {
       <div className={styles.card}>
         <div className={styles.main}>
           <SplitText as="h2" id="cta-title" className={`display ${styles.title}`}>
-            Teste o rowan por 14 dias
+            Leve o rowan para a sua loja
           </SplitText>
           <p className={styles.lead} data-reveal="up">
-            Todos os módulos do seu plano, sem pagar nada. O teste vale uma vez por CNPJ.
+            Mostramos o sistema funcionando com a rotina do seu petshop ou clínica e ajudamos a escolher o plano.
           </p>
 
           <div className={styles.actions} data-reveal="up">
-            <a className="btn btn--claro" href="https://wa.me/5511900000000?text=Quero%20testar%20o%20rowan" target="_blank" rel="noopener" data-magnetic>Testar 14 dias grátis</a>
-            <a className="btn btn--ghost" href="https://wa.me/5511900000000?text=Quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20do%20rowan" target="_blank" rel="noopener">Ver uma demonstração</a>
+            <a className="btn btn--claro" href="https://wa.me/5511900000000?text=Quero%20conhecer%20o%20rowan" target="_blank" rel="noopener" data-magnetic>Falar com a equipe</a>
+            <a className="btn btn--ghost" href="#planos">Ver planos</a>
 
             <svg className={styles.arrow} viewBox="0 0 100 66" fill="none" aria-hidden="true" data-draw>
               <path d="M94 60C70 64 30 58 20 12" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
@@ -41,8 +41,8 @@ export default function CtaFinal() {
 
         <dl className={styles.info} data-stagger>
           <div data-reveal="up">
-            <dt>14 dias grátis</dt>
-            <dd>Todos os módulos do plano, uma vez por CNPJ.</dd>
+            <dt>Um cadastro só</dt>
+            <dd>Tutor e pet com o mesmo histórico no banho, na vacina e na consulta.</dd>
           </div>
           <div data-reveal="up">
             <dt>Anual: paga 10, usa 12</dt>

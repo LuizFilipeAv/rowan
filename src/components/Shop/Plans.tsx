@@ -75,7 +75,7 @@ export default function Plans() {
                 </ul>
 
                 <a href="#contato" className={`btn ${p.recommended ? 'btn--claro' : 'btn--ghost'} ${styles.cta}`}>
-                  Testar 14 dias grátis
+                  Quero este plano
                 </a>
               </article>
             </li>
@@ -92,7 +92,7 @@ export default function Plans() {
         </ul>
       </div>
       <p className={styles.note} data-reveal="up">
-        14 dias grátis com todos os módulos do plano, uma vez por CNPJ.
+        Valores mensais por loja. Adicionais na mesma fatura.
       </p>
     </>
   );
