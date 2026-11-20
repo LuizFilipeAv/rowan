@@ -9,12 +9,11 @@ export default function Clinic() {
     <section className={styles.clinic} aria-labelledby="espaco-title">
       <div className={`container ${styles.head}`}>
         <SplitText as="h2" id="espaco-title" className={`display ${styles.title}`}>
-          Um espaço pensado pra eles
+          Feito para o balcão
         </SplitText>
         <p className={styles.lead} data-reveal="up">
-          Salas separadas para cães e gatos, piso que não escorrega e uma recepção onde ninguém precisa esperar
-          apertado. Consultório, exames e internação ficam no mesmo endereço, pra você não sair correndo com o
-          bicho no colo.
+          O rowan é usado em pé, com cliente esperando e cachorro latindo. Funciona no tablet da recepção, no
+          celular do motorista e no do tutor. Toda ação responde na hora.
         </p>
       </div>
 
@@ -23,7 +22,7 @@ export default function Clinic() {
           <div className={styles.inner} data-inner>
             <Image
               src={space}
-              alt="Recepção clara da clínica Bigode, com poltronas azuis e coral e um golden retriever deitado no chão"
+              alt="Recepção clara de um petshop com clínica, com poltronas verde-azuladas e um golden retriever deitado no chão"
               fill
               sizes="(min-width: 900px) calc(100vw - 4rem), 100vw"
               className={styles.img}
@@ -32,9 +31,9 @@ export default function Clinic() {
         </div>
 
         <ul className={styles.tags} data-tags data-stagger>
-          <li className={styles.tag} data-reveal="up">Sala só para gatos</li>
-          <li className={styles.tag} data-reveal="up">Internação monitorada</li>
-          <li className={styles.tag} data-reveal="up">Raio-X digital</li>
+          <li className={styles.tag} data-reveal="up">Recepção no tablet</li>
+          <li className={styles.tag} data-reveal="up">Motorista no celular</li>
+          <li className={styles.tag} data-reveal="up">Tutor acompanha pelo link</li>
         </ul>
       </ClinicStage>
     </section>

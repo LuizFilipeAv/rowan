@@ -9,7 +9,7 @@
   max-width: calc(var(--max) + 2 * var(--gutter));
   margin-inline: auto;
   padding: clamp(2.5rem, 2rem + 4vw, 5rem) clamp(1.25rem, 0.5rem + 4vw, 4.5rem) 0;
-  background: var(--foto-primaria);
+  background: var(--nav-fundo);
   color: var(--white);
   border-radius: var(--radius-l);
   overflow: clip;
@@ -25,9 +25,9 @@
 
 .title {
   font-size: var(--step-4);
-  max-width: 12ch;
+  max-width: 16ch;
 }
-.hl { color: var(--acento-suave); }
+.hl { color: var(--acento); }
 
 .lead {
   max-width: 52ch;
@@ -60,7 +60,7 @@
 .num {
   display: block;
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 800;
   font-size: clamp(2rem, 1.1rem + 3.6vw, 3.75rem);
   line-height: 0.9;
   letter-spacing: -0.01em;
@@ -72,7 +72,7 @@
   color: rgb(255 255 255 / 0.78);
 }
 
-/* photo sits IN the section: same blue backdrop, flush to the card's bottom edge */
+/* photo sits IN the section: same dark teal backdrop, flush to the card's bottom edge */
 .photo {
   position: relative;
   align-self: end;
