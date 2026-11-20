@@ -14,7 +14,7 @@
 }
 .hdr.is-solid .hdr__bar {
   background: rgb(255 255 255 / 0.92);
-  box-shadow: 0 10px 30px -14px rgb(11 20 51 / 0.3);
+  box-shadow: var(--shadow-lift);
   backdrop-filter: saturate(1.4) blur(10px);
 }
 .hdr__nav ul { display: flex; gap: clamp(0.8rem, 2vw, 1.8rem); list-style: none; padding: 0; }
@@ -30,7 +30,7 @@
 }
 .hdr__nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
-.hdr__logo { font-size: 2.1rem; text-decoration: none; display: block; padding-top: 0.15em; }
+.hdr__logo { font-size: 1.75rem; text-decoration: none; display: block; padding-top: 0.15em; }
 /* hidden while the hero wordmark is on screen */
 .hdr__logo { clip-path: inset(0 50% 0 50%); opacity: 0; transition: clip-path 600ms var(--ease-out), opacity 300ms linear; }
 .hdr.is-solid .hdr__logo { clip-path: inset(-40% -10% -20% -10%); opacity: 1; }
@@ -51,7 +51,7 @@
 
 .menu {
   position: fixed; inset: 0; z-index: -1; pointer-events: auto;
-  background: var(--primaria); color: var(--white);
+  background: var(--nav-fundo); color: var(--white);
   display: flex; flex-direction: column; justify-content: center;
   padding: 6rem var(--gutter) 2rem;
   clip-path: circle(0% at calc(100% - 3rem) 3rem);
@@ -60,7 +60,7 @@
 .menu[hidden] { display: none; }
 .menu.is-open { clip-path: circle(150% at calc(100% - 3rem) 3rem); }
 .menu ul { list-style: none; padding: 0; display: grid; gap: 0.3rem; }
-.menu a { font-size: clamp(3rem, 14vw, 5rem); text-decoration: none; display: inline-block; }
+.menu a { font-size: clamp(2.4rem, 11vw, 4rem); text-decoration: none; display: inline-block; }
 .menu li { overflow: clip; }
 .menu li a { transform: translateY(100%); transition: transform 600ms var(--ease-out); transition-delay: calc(var(--i) * 50ms + 150ms); }
 .menu.is-open li a { transform: none; }
@@ -71,7 +71,7 @@
   .hdr { padding: calc(var(--gutter) + 0.4rem) calc(var(--gutter) + 0.4rem) 0; }
   .hdr__bar { grid-template-columns: auto 1fr; padding-left: 1rem; }
   .hdr__nav { display: none; }
-  .hdr__logo { font-size: 1.8rem; }
+  .hdr__logo { font-size: 1.55rem; }
   .hdr__cta { display: none; }
   .hdr__burger { display: grid; }
 }

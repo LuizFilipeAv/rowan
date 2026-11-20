@@ -5,12 +5,12 @@ import { getLenis } from '@/lib/motion';
 import s from './Header.module.css';
 
 const links = [
-  { href: '#servicos', label: 'Serviços' },
-  { href: '#clinica', label: 'A clínica' },
-  { href: '#petshop', label: 'Petshop' },
-  { href: '#depoimentos', label: 'Depoimentos' },
+  { href: '#modulos', label: 'Módulos' },
+  { href: '#como-funciona', label: 'Como funciona' },
+  { href: '#planos', label: 'Planos' },
+  { href: '#para-quem', label: 'Para quem é' },
 ];
-const menuLinks = [...links, { href: '#contato', label: 'Contato' }];
+const menuLinks = [...links, { href: '#contato', label: 'Testar grátis' }];
 
 const Arrow = () => (
   <span className="btn__arrow" aria-hidden="true">
@@ -69,10 +69,10 @@ export default function Header() {
           </ul>
         </nav>
 
-        <a href="#top" className={s.hdr__logo} aria-label="Bigode, voltar ao início"><Logo /></a>
+        <a href="#top" className={s.hdr__logo} aria-label="rowan, voltar ao início"><Logo /></a>
 
         <div className={s.hdr__end}>
-          <a className={`btn ${s.hdr__cta}`} href="#contato" data-magnetic="">Agendar <Arrow /></a>
+          <a className={`btn ${s.hdr__cta}`} href="#contato" data-magnetic="">Testar 14 dias grátis <Arrow /></a>
           <button
             ref={burger}
             className={s.hdr__burger}
@@ -97,7 +97,7 @@ export default function Header() {
             <li key={l.href} style={{ ['--i' as string]: i }}><a href={l.href} className="display">{l.label}</a></li>
           ))}
         </ul>
-        <p className={s.menu__foot}>Emergência 24h · (11) 3000-0000</p>
+        <p className={s.menu__foot}>14 dias grátis · anual paga 10, usa 12</p>
       </div>
     </header>
   );

@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <Logo className={styles.logo} />
+            <Logo className={styles.logo} mono />
             <p className={styles.tagline}>Um cadastro e um histórico para o tutor e o pet, do banho à internação.</p>
           </div>
 

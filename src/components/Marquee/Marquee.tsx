@@ -2,7 +2,7 @@ import styles from './Marquee.module.css';
 
 type Props = {
   reverse?: boolean;
-  tone?: 'primaria' | 'acento' | 'coral';
+  tone?: 'primaria' | 'acento';
 };
 
 const items = [
@@ -32,11 +32,10 @@ function Paw() {
  * Decorative ticker band. The moving track is aria-hidden; a visually-hidden
  * list carries the same modules for screen readers.
  * tone: 'primaria' (default, teal band) or 'acento' (light teal band, dark text).
- * 'coral' is a legacy alias of 'acento', kept until src/app/page.tsx is updated.
  * reverse: scrolls in the opposite direction.
  */
 export default function Marquee({ reverse = false, tone = 'primaria' }: Props) {
-  const isAcento = tone === 'acento' || tone === 'coral';
+  const isAcento = tone === 'acento';
   const rootClass = isAcento ? `${styles.marquee} ${styles.acento}` : styles.marquee;
   const trackClass = reverse ? `${styles.track} ${styles.reverse}` : styles.track;
 

@@ -19,7 +19,7 @@ export default function Home() {
         <Services />
         <About />
         <Clinic />
-        <Marquee reverse tone="coral" />
+        <Marquee reverse tone="acento" />
         <Shop />
         <Testimonials />
         <CtaFinal />
